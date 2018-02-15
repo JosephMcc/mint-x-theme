@@ -1,0 +1,28 @@
+//
+// Nemo
+//
+
+.nemo-window {
+
+  .nemo-window-pane widget.entry {
+    border: 1px solid;
+    border-radius: 3px;
+
+    @include entry(focus);
+
+    &:selected { &:focus, & { @extend %selected_items; }}
+  }
+
+  .nemo-places-sidebar.frame { border-width: 0; }
+
+  // Fix padding of the statusbar buttons
+  & widget .toolbar .image-button { padding: 0; }
+}
+
+//
+// Cinnamon settings
+//
+
+.cs-header {
+  background-color: red;
+}
